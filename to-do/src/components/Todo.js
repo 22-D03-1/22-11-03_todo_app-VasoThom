@@ -24,9 +24,8 @@ class Todo extends Component {
     e.target[0].value = "";
   }
   handleTodoClick(index) {
-    const updatedtodos = JSON.parse(JSON.stringify(this.state.todos));
+    const updatedtodos = this.state.todos;
     updatedtodos[index].done = !updatedtodos[index].done;
-
     this.setState((state) => ({ ...state, todos: updatedtodos }));
   }
 
